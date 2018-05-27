@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tanks/Tank.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tanks/Player.gd" type="Script" id=2]
+[ext_resource path="res://bullets/PlayerBullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://arts/onlyObjects_retina.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 41.8081, 39.9137 )
+
+[node name="Player" instance=ExtResource( 1 )]
+
+collision_layer = 2
+collision_mask = 13
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+Bullet = ExtResource( 3 )
+max_speed = 200
+rotation_speed = 4.0
+gun_cooldown = 200.0
+max_health = 200
+
+[node name="Body" parent="." index="0"]
+
+rotation = -1.5708
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 436.09, 307.49, 83.9102, 81 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Pause", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+
+[node name="Turret" parent="." index="2"]
+
+rotation = -1.5708
+texture = ExtResource( 4 )
+offset = Vector2( 0, 20 )
+region_enabled = true
+region_rect = Rect2( 744, 684, 24, 61 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Pause", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="Muzzle" parent="Turret" index="0"]
+
+position = Vector2( 0, 55 )
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+
+position = Vector2( 1.46045, -2.32144 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1.4, 1.4 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit" ]
+
+

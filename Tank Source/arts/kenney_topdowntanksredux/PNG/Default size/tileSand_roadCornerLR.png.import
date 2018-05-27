@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/tileSand_roadCornerLR.png-f3648ab686e54f34a3c606e2621175ee.stex"
+
+[deps]
+
+source_file="res://arts/kenney_topdowntanksredux/PNG/Default size/tileSand_roadCornerLR.png"
+source_md5="fc067cd318b8c106b34b809e8913f48b"
+
+dest_files=[ "res://.import/tileSand_roadCornerLR.png-f3648ab686e54f34a3c606e2621175ee.stex" ]
+dest_md5="2d5bc9c5cd6aa96240537c6973e7da91"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

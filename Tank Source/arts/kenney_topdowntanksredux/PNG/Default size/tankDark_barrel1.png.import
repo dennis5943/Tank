@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/tankDark_barrel1.png-bf5bd1492703df2a366867e7684ccd2b.stex"
+
+[deps]
+
+source_file="res://arts/kenney_topdowntanksredux/PNG/Default size/tankDark_barrel1.png"
+source_md5="9fa7a22baa25bb9b977a6e7d82026287"
+
+dest_files=[ "res://.import/tankDark_barrel1.png-bf5bd1492703df2a366867e7684ccd2b.stex" ]
+dest_md5="de592f103a11e2f0f0d28627a59dc452"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

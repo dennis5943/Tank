@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://bullets/Bullet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://arts/onlyObjects_retina.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 12.1106
+height = 18.1654
+
+[node name="EnemyBullet" instance=ExtResource( 1 )]
+
+collision_mask = 2
+lifetime = 1.0
+
+[node name="Sprite" parent="." index="0"]
+
+rotation = 1.5708
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 435, 388, 25, 33 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="CollisionShape2D" parent="." index="1"]
+
+rotation = 1.5708
+scale = Vector2( 1, 0.868006 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+
