@@ -58,6 +58,7 @@ autostart = false
 
 visible = false
 animation = "fire"
+frame = 0
 playing = false
 
 [connection signal="animation_finished" from="Turret/Muzzle/BloomSprite" to="." method="_on_BloomSprite_animation_finished"]

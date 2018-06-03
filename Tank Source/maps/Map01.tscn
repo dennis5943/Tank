@@ -13,7 +13,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, -111.228, 155.523, -360.922, 37.7051, -188.989, -173.24, 633.902, 271.672, -386.113, 729.484, 0, 0, 166.35, -84.6515, 906.37, 731.422, 0, 0, 23.6237, -35.4355, 1100.15, 508.58, 61.0278, 59.0592, -57.0905, -136.82, 1034.26, 181.099, 0, 0, 0, 0, 795.918, 95.8378, -34.4512, -152.57, 47.2473, 290.374, 631.209, 305.115, 0, 0, 53.1533, 25.5923, 1623.34, 611.281, -92.526, 145.679, 0, 0, 2175.79, 510.518, 0, 0, 0, 0, 2263.77, 276.39, 0, 0, 0, 0, 1927.72, 118.111, 0, 0, 0, 0, 1422.37, 487.034, 0, 0, 0, 0, 595.934, 547.471, 0, 0, -107.291, -62.0121, -94.8617, 11.8045, 0, 0, 0, 0, -361.219, 39.3654 )
 }
 
-[node name="Map01" type="Node2D" index="0"]
+[node name="Map01" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
@@ -135,6 +135,11 @@ max_speed = 100
 max_health = 50
 turret_speed = 3.0
 detect_radius = 300
+
+[node name="Enemy" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 1344.01, 184.259 )
+detect_radius = 500
 
 [connection signal="health_changed" from="Player" to="HUD" method="_on_Player_health_changed"]
 
