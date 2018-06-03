@@ -49,6 +49,7 @@ gun_cooldown = 0.5
 
 [node name="Node2D" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
 [node name="Path2D" type="Path2D" parent="Node2D" index="0"]
@@ -71,6 +72,7 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index"
 
 [node name="Enemy01" parent="Node2D/Path2D/PathFollow2D" index="0" instance=ExtResource( 5 )]
 
+rotation = -1.5708
 max_speed = 100
 max_health = 50
 turret_speed = 3.0
@@ -91,6 +93,7 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index"
 
 [node name="Enemy01" parent="Node2D/Path2D/PathFollow2D2" index="0" instance=ExtResource( 5 )]
 
+rotation = -1.5708
 max_speed = 100
 max_health = 50
 turret_speed = 3.0
@@ -111,6 +114,7 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index"
 
 [node name="Enemy01" parent="Node2D/Path2D/PathFollow2D3" index="0" instance=ExtResource( 5 )]
 
+rotation = -1.5708
 max_speed = 100
 max_health = 50
 turret_speed = 3.0
@@ -131,6 +135,7 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index"
 
 [node name="Enemy01" parent="Node2D/Path2D/PathFollow2D4" index="0" instance=ExtResource( 5 )]
 
+rotation = -1.5708
 max_speed = 100
 max_health = 50
 turret_speed = 3.0
@@ -152,5 +157,7 @@ detect_radius = 500
 [connection signal="shoot" from="Node2D/Path2D/PathFollow2D3/Enemy01" to="." method="_on_Tank_shoot"]
 
 [connection signal="shoot" from="Node2D/Path2D/PathFollow2D4/Enemy01" to="." method="_on_Tank_shoot"]
+
+[connection signal="shoot" from="Enemy" to="." method="_on_Tank_shoot"]
 
 

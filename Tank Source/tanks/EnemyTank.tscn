@@ -14,7 +14,6 @@ extents = Vector2( 40.4731, 41.8297 )
 
 [node name="Enemy" index="0" instance=ExtResource( 1 )]
 
-rotation = -1.5708
 collision_layer = 4
 collision_mask = 2
 script = ExtResource( 2 )

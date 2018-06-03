@@ -36,22 +36,18 @@ func _process(delta):
 		$Arrow.degrees = Vector2(1,0).angle_to(target_dir) /PI * 180
 		$EnemyHUD.lbText = String(target_dir) + '\r\n' + String(target_dir.angle_to(Vector2(1,0)) )
 		
-		#$EnemyHUD.lbText = String(target_dir)
-		
-		target_dir = target_dir.rotated(- PI / 2)
+		target_dir = Vector2(0,-1).rotated(Vector2(1,0).angle_to(target_dir))
 		
 		$Turret.global_rotation = current_dir.linear_interpolate(target_dir,turret_speed * delta).angle()
 		
 		if target_dir.dot(current_dir) > 0.9:
 			shoot()
 			pass
-			
 
 func _on_DetectRadius_body_entered(body):
 	print('enter:',body.name)
 	if body.name == 'Player':
 		target = body
-
 
 func _on_DetectRadius_body_exited(body):
 	if body == target:
