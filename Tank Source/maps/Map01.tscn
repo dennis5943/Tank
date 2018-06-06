@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://maps/Map01.gd" type="Script" id=1]
 [ext_resource path="res://maps/HUD.tscn" type="PackedScene" id=2]
 [ext_resource path="res://terrain/terrain_tiles.tres" type="TileSet" id=3]
 [ext_resource path="res://tanks/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://tanks/EnemyTank.tscn" type="PackedScene" id=5]
+[ext_resource path="res://static_items/static_box.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -145,6 +146,11 @@ detect_radius = 300
 
 position = Vector2( 1344.01, 184.259 )
 detect_radius = 500
+
+[node name="static_box" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 1450.99, 94.2835 )
+rotation = 0.634296
 
 [connection signal="health_changed" from="Player" to="HUD" method="_on_Player_health_changed"]
 

@@ -26,6 +26,10 @@ func control(delta):
 		parent.set_offset(parent.get_offset() + speed * delta)
 	else:
 		pass
+		
+func _draw():
+	if $Arrow.visible:
+		draw_circle(Vector2(0,0), detect_radius, Color(0.5,0,0,0.2 ))
 
 func _process(delta):
 
